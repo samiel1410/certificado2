@@ -162,7 +162,7 @@
                     else {
                     	
                       
-                      var redirect = '../inicio/index.php';
+                      var redirect = '../index.php';
                       window.location = redirect;
                     }
                   },
