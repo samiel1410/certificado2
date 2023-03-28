@@ -21,12 +21,25 @@ function certificado(id) {
                 nota= data.nota;
              
                 if(nota <17 ){
-                    swal("Advertencia!", "No tiene una nota aprobatoria!", "info");
+
+                    Swal.fire({
+                        title: 'Advertencia!',
+                        text: 'No tiene una nota aprobatoria',
+                        icon: 'info',
+                        confirmButtonText: 'Ok'
+                      })
+                   
                    
                 }
                 else if(pdf=="")
                 {
-                    swal("Advertencia!", "Aun no se sube el certificado!", "info");
+                    Swal.fire({
+                        title: 'Advertencia!',
+                        text: 'Aun no se sube el certificado',
+                        icon: 'info',
+                        confirmButtonText: 'Ok'
+                      })
+                  
                 }
                 
                 else{
@@ -60,14 +73,14 @@ function salir(){
 
 
    
-    swal({
-        title: '¿Seguro que desea eliminar el registro?',
+    Swal.fire({
+        title: '¿Seguro que desea salir?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         cancelButtonText: 'Cancelar',
-        confirmButtonText: '¡Si, eliminar!'
+        confirmButtonText: 'Si'
     }).then((result) => {
     if (result.value) {
 
